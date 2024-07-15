@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ex_path.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ichpakov <ichpakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:26:14 by ichpakov          #+#    #+#             */
-/*   Updated: 2024/07/11 15:19:37 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:13:33 by ichpakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,15 @@ static char	*my_getenv(char *name, char **env)
 		i++;
 	}
 	return (NULL);
+}
+
+void	lvl_checker(t_params *cmds)
+{
+	if (ft_strequal(cmds->com[0], "./minishell") == 0)
+	{
+		signal(SIGINT, SIG_IGN);
+		signal(SIGQUIT, SIG_IGN);
+	}
 }
 
 char	*get_path(char *cmd, char **env)

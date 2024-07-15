@@ -6,7 +6,7 @@
 /*   By: ichpakov <ichpakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 14:52:31 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/07/15 14:09:33 by ichpakov         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:03:52 by ichpakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,6 @@ int	main(int argc, char **argv, char **env)
 	para = NULL;
 	put = NULL;
 	data = NULL;
-	signal(SIGINT, SIG_DFL);
-	signal(SIGQUIT, SIG_DFL);
 	signal(SIGINT, handler_signal);
 	signal(SIGQUIT, handler_signal);
 	if (argc < 1 || argv[1] != NULL)

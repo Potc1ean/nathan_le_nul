@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ichpakov <ichpakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:51:36 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/07/11 15:29:46 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:13:03 by ichpakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,7 @@ int		exec_error(int num);
 void	exec_signal(int signal);
 void	handler_signal(int signal);
 void	handle_sigint_heredoc(int sig);
+void	lvl_checker(t_params *cmds);
 
 //exec
 int		ms_exec_loop(t_data *data, t_params **cmds, t_put *puts, t_env **env);

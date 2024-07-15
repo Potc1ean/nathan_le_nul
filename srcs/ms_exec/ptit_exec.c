@@ -6,7 +6,7 @@
 /*   By: ichpakov <ichpakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:02:34 by ichpakov          #+#    #+#             */
-/*   Updated: 2024/07/15 13:59:05 by ichpakov         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:13:49 by ichpakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int	ms_redir_exec(t_data *data, t_params *cmds, t_put *puts, t_env **env)
 {
 	int	status;
 
+	lvl_checker(cmds);
 	if (puts->input && (close(open(puts->input, O_RDONLY)) == -1))
 		return (256 * (printf("no such file or directory\n") / 26));
 	if (cmds->inp_red == entre1 || cmds->inp_red == entre2)
