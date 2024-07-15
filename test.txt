@@ -1,0 +1,8 @@
+includes
+main.c
+main.o
+makefile
+minishell
+ms_libft
+srcs
+test.txt

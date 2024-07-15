@@ -1,0 +1,5 @@
+
+
+
+1:    syntax error near unexpected token (commande qui commande par < > | ou < > | suivie de rien)
+
